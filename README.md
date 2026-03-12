@@ -4,16 +4,16 @@
 
 ## インストール
 
-Claude Code の設定メニューからプラグインを追加:
+Claude Code で以下を実行:
 
 ```
-/plugins add https://github.com/eris-ths/workflow-essentials
+/plugin marketplace add eris-ths/workflow-essentials
+/plugin install workflow-essentials@workflow-essentials
 ```
 
 または、手動でインストール:
 
 ```bash
-# プラグインディレクトリにクローン
 git clone https://github.com/eris-ths/workflow-essentials.git ~/.claude/plugins/workflow-essentials
 ```
 
