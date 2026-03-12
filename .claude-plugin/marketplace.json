@@ -1,0 +1,18 @@
+{
+  "name": "eris-ths-workflow-essentials",
+  "owner": {
+    "name": "Nao & Eris",
+    "email": "nao.amj@gmail.com"
+  },
+  "metadata": {
+    "description": "4 commands for structured development with Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "workflow-essentials",
+      "source": ".",
+      "description": "Essential development workflow — /ctx, /devil, /ship, /reflect",
+      "version": "1.0.0"
+    }
+  ]
+}

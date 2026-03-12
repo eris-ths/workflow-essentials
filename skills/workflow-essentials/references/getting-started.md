@@ -6,13 +6,14 @@ Claude Code で以下を実行:
 
 ```
 /plugin marketplace add eris-ths/workflow-essentials
-/plugin install workflow-essentials@eris-ths/workflow-essentials
+/plugin install workflow-essentials@eris-ths-workflow-essentials
 ```
 
-または、手動でインストール:
+または、手動でクローンして直接読み込む:
 
 ```bash
-git clone https://github.com/eris-ths/workflow-essentials.git ~/.claude/plugins/workflow-essentials
+git clone https://github.com/eris-ths/workflow-essentials.git
+claude --plugin-dir ./workflow-essentials
 ```
 
 インストール後、Claude Code を再起動すれば準備完了。設定ファイルは不要。
