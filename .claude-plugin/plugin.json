@@ -4,7 +4,7 @@
   "description": "Essential development workflow for Claude Code. /ctx, /devil, /ship, /reflect — 4 commands to structure your development process.",
   "author": {
     "name": "Nao & Eris",
-    "url": "https://github.com/nao-amj"
+    "url": "https://github.com/eris-ths"
   },
   "repository": "https://github.com/eris-ths/workflow-essentials",
   "license": "MIT",

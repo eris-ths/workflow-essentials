@@ -1,8 +1,7 @@
 {
   "name": "eris-ths-workflow-essentials",
   "owner": {
-    "name": "Nao & Eris",
-    "email": "nao.amj@gmail.com"
+    "name": "Nao & Eris"
   },
   "metadata": {
     "description": "4 commands for structured development with Claude Code"
