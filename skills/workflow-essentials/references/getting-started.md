@@ -6,7 +6,7 @@ Claude Code で以下を実行:
 
 ```
 /plugin marketplace add eris-ths/workflow-essentials
-/plugin install workflow-essentials@workflow-essentials
+/plugin install workflow-essentials@eris-ths/workflow-essentials
 ```
 
 または、手動でインストール:
