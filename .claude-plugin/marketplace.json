@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "workflow-essentials",
-      "source": ".",
+      "source": "./",
       "description": "Essential development workflow — /ctx, /devil, /ship, /reflect",
       "version": "1.0.0"
     }
