@@ -62,11 +62,11 @@ claude --plugin-dir ./workflow-essentials
 ```
 
 5 Phase を順番に実行:
-1. **Devil** — 品質+セキュリティレビュー
-2. **テスト** — テストスイート実行
-3. **ドキュメント** — 必要な更新
-4. **コミット** — 変更をコミット
-5. **デプロイ** — 本番反映（設定時）
+1. **Review** — 品質+セキュリティレビュー（/devil）
+2. **Fix** — 指摘の修正 → 再レビュー
+3. **Test** — テストスイート実行
+4. **Commit** — 変更をコミット
+5. **Deploy** — 本番反映（設定時）
 
 ```
 /ship --dry
@@ -80,7 +80,7 @@ claude --plugin-dir ./workflow-essentials
 /reflect
 ```
 
-セッション中の学び（踏んだ罠、成功パターン、判断の理由）を MEMORY.md に記録。次回 `/ctx` で復元した時に活きる。
+セッション中の学び（踏んだ罠、成功パターン、判断の理由）を .claude/ctx/learnings.md に記録。次回 `/ctx` で復元した時に活きる。
 
 ### 1日の開発フロー例
 
@@ -109,7 +109,7 @@ claude --plugin-dir ./workflow-essentials
 | `/ctx` | セッション文脈の保存と復元 | `save`, `load`（デフォルト） |
 | `/devil` | 懸念収束型の批判的レビュー | `--fix`（自動修正） |
 | `/ship` | 5 Phase の出荷フロー | `--dry`, `--skip-test` |
-| `/reflect` | 学びを MEMORY.md に記録 | `--clean`（整理） |
+| `/reflect` | 学びを .claude/ctx/learnings.md に記録 | `--clean`（整理） |
 
 ## オプション設定
 
@@ -141,4 +141,4 @@ commit:
 
 ---
 
-*v1.0.0 — 2026-03-12*
+*v1.1.0 — 2026-03-12*

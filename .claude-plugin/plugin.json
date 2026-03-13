@@ -1,6 +1,6 @@
 {
   "name": "workflow-essentials",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Essential development workflow for Claude Code. /ctx, /devil, /ship, /reflect — 4 commands to structure your development process.",
   "author": {
     "name": "Nao & Eris",

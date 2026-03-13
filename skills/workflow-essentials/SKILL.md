@@ -4,14 +4,10 @@ description: >-
   汎用開発ワークフロー。/ctx（文脈保存）、/devil（批判的レビュー）、
   /ship（出荷フロー）、/reflect（学習記録）の4コマンドを提供。
   Claude Code を使う全ての開発者向け。追加インフラ不要。
-version: 1.0.0
+version: 1.1.0
 user-invocable: false
 triggers:
   - workflow
-  - devil
-  - ship
-  - ctx
-  - reflect
   - レビュー
   - 出荷
 ---
@@ -27,7 +23,7 @@ triggers:
 | `/ctx` | セッション文脈の保存と復元 | `/ctx save` / `/ctx` (load) |
 | `/devil` | 批判的レビュー（品質 + セキュリティ） | `/devil` / `/devil --fix` |
 | `/ship` | 出荷フロー（レビュー→テスト→コミット→デプロイ） | `/ship` / `/ship --dry` |
-| `/reflect` | 学びの記録 | `/reflect` / `/reflect --clean` |
+| `/reflect` | 学びを .claude/ctx/learnings.md に記録 | `/reflect` / `/reflect --clean` |
 
 ## 開発フロー
 
@@ -47,18 +43,11 @@ triggers:
 
 ## セットアップ
 
-1. このスキルをプロジェクトに追加
+1. このプラグインをインストール
 2. （任意）`.claude/ship.yml` でテスト・デプロイコマンドを設定
 3. `/ctx` で開始
 
 追加のインフラ、外部サービス、設定は不要。
-
-## 各コマンド詳細
-
-- `commands/ctx.md` — セッション文脈管理
-- `commands/devil.md` — Devil's Advocate レビュー
-- `commands/ship.md` — 出荷フロー
-- `commands/reflect.md` — 学習記録
 
 ## 設計思想
 
@@ -71,4 +60,4 @@ triggers:
 
 ---
 
-*v1.0.0 — 2026-03-12*
+*v1.1.0 — 2026-03-13*

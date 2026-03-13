@@ -1,24 +1,25 @@
 ---
-description: "セッション文脈の保存と復元。次回の自分へのメモ"
-tags: [context, session, workflow]
+name: ctx
+description: "セッション文脈の保存と復元。/ctx save で保存、/ctx で復元"
+argument-hint: "[save|load]"
+triggers:
+  - context
+  - session
+  - 文脈
+  - セッション
+  - 復元
+  - 引き継ぎ
 ---
 
 # /ctx — Session Context
 
 セッションの状態を保存し、次回復元する。
-覚えることは2つだけ: save と load。
 
-**使い方**: `/ctx [save|load]`
-
-## 引数
-
-- **引数なし** → load（最も頻繁な操作を最短に）
+- **引数なし** → load（前回の状態を復元）
 - **save** → 現在のセッション状態を保存
 - **load** → 前回の状態を復元
 
-## 手順
-
-### /ctx save
+## /ctx save
 
 1. 現在のセッション状態を整理:
    - 日時、ブランチ
@@ -47,18 +48,10 @@ tags: [context, session, workflow]
 - 未解決の問題・判断待ち事項
 ```
 
-### /ctx load（または /ctx）
+## /ctx load（または /ctx）
 
 1. `.claude/ctx/resume.md` を読む
 2. 前回の状態サマリーを表示
 3. 推奨される次のアクションを提示
-
-## 設計原則
-
-```yaml
-2操作だけ: "save と load。覚えることがほぼない"
-1ファイル: ".claude/ctx/resume.md にすべて"
-自分へのメモ: "次の自分（次セッションの AI）への引き継ぎ書"
-```
 
 $ARGUMENTS
