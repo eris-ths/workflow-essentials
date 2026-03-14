@@ -20,6 +20,10 @@ claude --plugin-dir ./workflow-essentials
 
 インストール後、Claude Code を再起動（`/exit` → 再度起動）すれば準備完了。
 
+### 更新
+
+プラグインの更新後は `/reload-plugins` を実行すると、再起動なしで新バージョンが反映される。
+
 ## クイックスタート
 
 ```
@@ -40,6 +44,15 @@ claude --plugin-dir ./workflow-essentials
 ```
 
 前回 `/ctx save` で保存した文脈（何をやっていたか、次に何をするか）を自動復元。セッション終了時に `/ctx save` しておくだけ。
+
+名前付きスロットで複数の作業文脈を管理することもできる:
+
+```
+/ctx save api          ← API作業の文脈を保存
+/ctx save frontend     ← フロント作業の文脈を保存
+/ctx list              ← 保存済みスロット一覧
+/ctx api               ← API作業に切り替え
+```
 
 ### コードを書いたけど、見落としがないか不安
 
@@ -106,7 +119,7 @@ claude --plugin-dir ./workflow-essentials
 
 | コマンド | 機能 | 主なオプション |
 |---------|------|---------------|
-| `/ctx` | セッション文脈の保存と復元 | `save`, `load`（デフォルト） |
+| `/ctx` | セッション文脈の保存と復元 | `save [slot]`, `load [slot]`, `list`, `delete <slot>` |
 | `/devil` | 懸念収束型の批判的レビュー | `--fix`（自動修正） |
 | `/ship` | 5 Phase の出荷フロー | `--dry`, `--skip-test` |
 | `/reflect` | 学びを .claude/ctx/learnings.md に記録 | `--clean`（整理） |
@@ -141,4 +154,4 @@ commit:
 
 ---
 
-*v1.1.0 — 2026-03-12*
+*v1.1.1 — 2026-03-14*
